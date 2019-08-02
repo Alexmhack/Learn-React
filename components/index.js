@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import MyInfo from './MyInfo'
+import MyInfo from './components/MyInfo'
 
 // ReactDOM takes in two arguments
 // 1. What to render => HTML/Variables
