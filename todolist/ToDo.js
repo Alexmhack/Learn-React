@@ -11,12 +11,17 @@ function ToDo () {
 	// background-color won't work since we cannot use hypen in regular JS.
 	// we use camel case in these cases.
 
+	const styles = {
+		color: "#fff",
+		backgroundColor: "#FF2D00"
+	}
+
   return (
     <div>
       <input type='checkbox' name='check1' />
       <input type='checkbox' name='check2' />
       <input type='checkbox' name='check3' />
-      <p style={{color: "#fff", backgroundColor: "#FF2D00"}}>First Task: {firstTask}</p>
+      <p style={styles}>First Task: {firstTask}</p>
       <p>Second Task: {secondTask}</p>
     </div>
   )
