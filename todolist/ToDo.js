@@ -8,12 +8,15 @@ function ToDo () {
 	// 1. First wrap is for JSX
 	// 2. Second wrap is for JS
 
+	// background-color won't work since we cannot use hypen in regular JS.
+	// we use camel case in these cases.
+
   return (
     <div>
       <input type='checkbox' name='check1' />
       <input type='checkbox' name='check2' />
       <input type='checkbox' name='check3' />
-      <p style={{color: #ffffff}}>First Task: {firstTask}</p>
+      <p style={{color: "#fff", backgroundColor: "#FF2D00"}}>First Task: {firstTask}</p>
       <p>Second Task: {secondTask}</p>
     </div>
   )
