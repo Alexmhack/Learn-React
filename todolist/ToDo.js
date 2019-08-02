@@ -18,7 +18,10 @@ function ToDo () {
 	}
 
   return (
-    <div>
+    <div className='todo-list'>
+    	<TodoItem />
+    	<TodoItem />
+    	<TodoItem />
     	<TodoItem />
     </div>
   )
