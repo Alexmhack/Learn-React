@@ -14,7 +14,8 @@ function ToDo () {
 	const styles = {
 		color: "#fff",
 		backgroundColor: "#FF2D00",
-		fontSize: 50 // default size is in pixels
+		fontSize: 50, // default size is in pixels
+		margin: "20px" // you can also use quotes for defining size
 	}
 
   return (
