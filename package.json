@@ -1,0 +1,30 @@
+{
+  "name": "learn-react",
+  "version": "1.0.0",
+  "description": "Learning react following tutorial",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "browserify": "^16.3.0",
+    "esmify": "^2.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexmhack/Learn-React.git"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "Alexmhack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexmhack/Learn-React/issues"
+  },
+  "homepage": "https://github.com/Alexmhack/Learn-React#readme"
+}
