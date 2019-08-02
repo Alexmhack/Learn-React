@@ -1,9 +1,8 @@
 import React from 'react'
 
-function ToDo () {
-	const firstTask = 'Write content'
-	const secondTask = 'Run code'
+import TodoItem from './TodoItem'
 
+function ToDo () {
 	// two curly braces are used to wrap inline styles because
 	// 1. First wrap is for JSX
 	// 2. Second wrap is for JS
@@ -20,11 +19,7 @@ function ToDo () {
 
   return (
     <div>
-      <input type='checkbox' name='check1' />
-      <input type='checkbox' name='check2' />
-      <input type='checkbox' name='check3' />
-      <p style={styles}>First Task: {firstTask}</p>
-      <p>Second Task: {secondTask}</p>
+    	<TodoItem />
     </div>
   )
 }
