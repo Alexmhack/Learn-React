@@ -5,7 +5,9 @@ import VideoRecorder from 'react-video-recorder'
 class VideoRecorderSample extends Component {
 	render () {
 		return (
-			<VideoRecorder />
+			<div>
+				<VideoRecorder />
+			</div>
 		)
 	}
 }
