@@ -12,7 +12,7 @@ function App() {
 	// })
 
 	// short form of above code
-	const jokeComponents = JokesData.map(joke => <Joke question={joke.question}
+	const jokeComponents = JokesData.map((joke, key) => <Joke key={'key-' + key} question={joke.question}
 		punchline={joke.punchLine} />)
 
   return (
