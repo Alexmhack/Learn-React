@@ -3,6 +3,10 @@ import React from 'react'
 function TodoItem (props) {
 	const completed = props.completed
 
+	function handleCheckInput (event) {
+		console.log(event)
+	}
+
 	return (
 		<div className="card mb-4">
 			<div className="card-body">
@@ -16,6 +20,7 @@ function TodoItem (props) {
 			      	<input type='checkbox'
 			      		aria-label="Checkbox for following text input"
 			      		name='check1'
+			      		onChange={handleCheckInput}
 			      		checked={completed} />
 				    </div>
 				  </div>
