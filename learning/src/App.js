@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+
 // import VideoRecorderSample from './thirdparty/VideoRecorderSample'
 // <VideoRecorderSample />
 
@@ -8,6 +10,7 @@ import React from 'react';
 
 import products from './products/vshoolProducts'
 import Product from './products/Product'
+import ProductList from './products/ProductList'
 
 function App() {
 	// const jokeComponents = JokesData.map(function(joke) {
@@ -23,15 +26,7 @@ function App() {
 		name={product.name} description={product.description} price={product.price} />)
 
   return (
-    <div className="App py-5">
-			<div className="container">
-				<div className="row">
-					<div className="col-md-6">
-	    			{productComponents}
-					</div>
-				</div>
-			</div>
-    </div>
+  	<ProductList />
   );
 }
 
