@@ -18,7 +18,7 @@ class statesInReact extends Component {
 	render () {
 		return (
 			<div>
-				<h4>States is a feature of React.</h4>
+				<h4>Is state important to know? {this.state.answer}</h4>
 			</div>
 		)
 	}
