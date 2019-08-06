@@ -5,7 +5,9 @@ import products from './vshoolProducts'
 
 function ProductList (props) {
 	const productComponents = products.map(product => <Product key={product.id}
-		name={product.name} description={product.description} price={product.price} />)
+		name={product.name} description={product.description} price={product.price}
+		id={product.id} />
+	)
 
 	return (
     <div className="App py-5">
