@@ -12,8 +12,8 @@ import NotFound from './NotFound'
 
 import ProductList from './products/ProductList'
 import ProductDetail from './products/ProductDetail'
-
 import ToDo from './todolist/ToDo'
+import statesInReact from './statesInReact/statesInReact'
 
 function App() {
 	// const jokeComponents = JokesData.map(function(joke) {
@@ -34,6 +34,7 @@ function App() {
   			<Route exact path='/' component={ProductList} />
   			<Route exact path='/product/:id' component={ProductDetail} />
   			<Route exact path='/todos' component={ToDo} />
+        <Route exact path='/states' component={statesInReact} />
   			<Route component={NotFound} />
   		</Switch>
   	</BrowserRouter>
