@@ -24,7 +24,13 @@ function App() {
 
   return (
     <div className="App py-5">
-    	{jokeComponents}
+			<div className="container">
+				<div className="row">
+					<div className="col-md-6">
+	    			{productComponents}
+					</div>
+				</div>
+			</div>
     </div>
   );
 }
