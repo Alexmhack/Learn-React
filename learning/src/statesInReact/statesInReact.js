@@ -17,7 +17,7 @@ class statesInReact extends Component {
 
 	render () {
 		return (
-			<div>
+			<div className='text-center mt-5'>
 				<h4>Is state important to know? {this.state.answer}</h4>
 			</div>
 		)
