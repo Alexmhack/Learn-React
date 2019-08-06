@@ -24,7 +24,11 @@ function App() {
 	console.log(supportsHistory)
 
   return (
-  	<ProductList />
+  	<BrowserRouter>
+  		<Switch>
+  			<Route exact path='/' component={ProductList} />
+  		</Switch>
+  	</BrowserRouter>
   );
 }
 
