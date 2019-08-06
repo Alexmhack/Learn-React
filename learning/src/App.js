@@ -20,6 +20,9 @@ function App() {
 	// 	punchline={joke.punchLine} />)
 	// {jokeComponents}
 
+	const supportsHistory = 'pushstate' in window.history
+	console.log(supportsHistory)
+
   return (
   	<ProductList />
   );
