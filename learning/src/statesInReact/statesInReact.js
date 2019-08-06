@@ -8,6 +8,11 @@ import React, { Component } from 'react'
 class statesInReact extends Component {
 	constructor (props) {
 		super(props)
+
+		// state is an object with key value pairs
+		this.state = {
+			answer: "Yes"
+		}
 	}
 
 	render () {
