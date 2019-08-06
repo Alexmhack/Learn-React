@@ -53,3 +53,6 @@ class Greeting extends Component {
 }
 
 ReactDOM.render(<App />, document.getElementById("root"))
+
+// NOTE: You cannot change the value of props inside the component once passed value
+// from another component
