@@ -4,8 +4,7 @@ import TodoItem from './TodoItem'
 import todoData from './todoData'
 
 function ToDo (props) {
-	const todoComponents = todoData.map(item => <TodoItem key={item.id} id={item.id}
-		text={item.text} completed={item.completed} />)
+	const todoComponents = todoData.map(item => <TodoItem key={item.id} item={item} />)
 
 	return (
 		<div className="container">
