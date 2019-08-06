@@ -1,7 +1,7 @@
 import React from 'react'
 
 function TodoItem (props) {
-	const completed = props.completed
+	const completed = props.item.completed
 
 	function handleCheckInput (event) {
 		console.log(event)
@@ -11,7 +11,7 @@ function TodoItem (props) {
 		<div className="card mb-4">
 			<div className="card-body">
 				<h5 className="card-title">
-					{completed ? <s><p>{props.text}</p></s> : <p>{props.text}</p>}
+					{completed ? <s><p>{props.item.text}</p></s> : <p>{props.item.text}</p>}
 				</h5>
 
 				<div className="input-group mb-3">
