@@ -16,7 +16,7 @@ function App() {
 		punchline={joke.punchLine} />)
 
   return (
-    <div className="App">
+    <div className="App py-5">
     	{jokeComponents}
     </div>
   );
