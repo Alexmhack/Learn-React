@@ -2,6 +2,8 @@ import React from 'react';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
+import NotFound from './NotFound'
+
 // import VideoRecorderSample from './thirdparty/VideoRecorderSample'
 // <VideoRecorderSample />
 
@@ -27,6 +29,7 @@ function App() {
   	<BrowserRouter>
   		<Switch>
   			<Route exact path='/' component={ProductList} />
+  			<Route component={NotFound} />
   		</Switch>
   	</BrowserRouter>
   );
