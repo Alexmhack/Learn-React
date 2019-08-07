@@ -1,5 +1,9 @@
 import React from 'react'
 
+function handleClickEvent () {
+	console.log('button is clicked')
+}
+
 function EventHandling (props) {
 	return (
 		<div className="pt-5 text-center">
@@ -7,7 +11,7 @@ function EventHandling (props) {
 			<br />
 			<br />
 			<br />
-			<button onClick={() => console.log('button is clicked')}>Click me</button>
+			<button onClick={handleClickEvent}>Click me</button>
 		</div>
 	)
 }
