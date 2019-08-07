@@ -8,6 +8,7 @@ function EventHandling (props) {
 	return (
 		<div className="py-5 text-center">
 			<img onMouseOver={() => console.log('mouse is over the image')}
+				alt="Famous celebrity is posing wierdly"
 				src="https://www.fillmurray.com/500/400"
 				onLoad={e => console.log('image is loaded')}
 				onError={e => console.log('error loading image')}/>
