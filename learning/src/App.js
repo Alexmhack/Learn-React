@@ -15,6 +15,7 @@ import ProductDetail from './products/ProductDetail'
 import ToDo from './todolist/ToDo'
 import statesInReact from './statesInReact/statesInReact'
 import LoggedUser from './classBased/LoggedUser'
+import SamplesRoutes from './samples/SamplesRoutes'
 
 function App() {
 	// const jokeComponents = JokesData.map(function(joke) {
@@ -32,6 +33,7 @@ function App() {
   return (
   	<BrowserRouter>
   		<Switch>
+        <Route path='/samples/' component={SamplesRoutes} />
   			<Route exact path='/' component={ProductList} />
   			<Route exact path='/product/:id' component={ProductDetail} />
   			<Route exact path='/todos' component={ToDo} />
