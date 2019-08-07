@@ -7,7 +7,8 @@ function handleClickEvent () {
 function EventHandling (props) {
 	return (
 		<div className="pt-5 text-center">
-			<img src="https://www.fillmurray.com/500/400" />
+			<img onMouseOver={() => console.log('mouse is over the image')}
+				src="https://www.fillmurray.com/500/400" />
 			<br />
 			<br />
 			<br />
