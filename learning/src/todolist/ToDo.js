@@ -4,8 +4,18 @@ import TodoItem from './TodoItem'
 import todoData from './todoData'
 
 class ToDo extends Component {
+	constructor (props) {
+		super(props)
+
+		this.state = {
+			todos: todoData
+		}
+	}
+
 	render () {
-		const todoComponents = todoData.map(item => <TodoItem key={item.id} item={item} />)
+		const todoComponents = this.state.todos.map(item => <TodoItem key={item.id}
+			item={item} />)
+
 		return (
 			<div className="container">
 				<div className="row mt-4">
