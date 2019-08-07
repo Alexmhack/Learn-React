@@ -7,7 +7,7 @@ function EventHandling (props) {
 			<br />
 			<br />
 			<br />
-			<button onClick={function() {console.log('button is clicked')}}>Click me</button>
+			<button onClick={() => console.log('button is clicked')}>Click me</button>
 		</div>
 	)
 }
