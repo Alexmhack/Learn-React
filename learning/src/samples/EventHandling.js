@@ -8,7 +8,9 @@ function EventHandling (props) {
 	return (
 		<div className="py-5 text-center">
 			<img onMouseOver={() => console.log('mouse is over the image')}
-				src="https://www.fillmurray.com/500/400" />
+				src="https://www.fillmurray.com/500/400"
+				onLoad={e => console.log('image is loaded')}
+				onError={e => console.log('error loading image')}/>
 			<br />
 			<br />
 			<br />
@@ -18,6 +20,10 @@ function EventHandling (props) {
 			<h3 onCopy={e => console.log('text is copied')}>
 				Handle copy event on this piece of text.
 			</h3>
+			<br />
+			<br />
+			<textarea onPaste={e => console.log(e.clipboardData)} onCut={e => console.log('text is cut')}>
+			</textarea>
 		</div>
 	)
 }
