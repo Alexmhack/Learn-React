@@ -23,8 +23,10 @@ function EventHandling (props) {
 			</h3>
 			<br />
 			<br />
-			<textarea onPaste={e => console.log(e.clipboardData)} onCut={e => console.log('text is cut')}>
-			</textarea>
+			<form onInput={e => console.log(e.target.value)} action=".">
+				<textarea onPaste={e => console.log(e.clipboardData)} onCut={e => console.log('text is cut')}>
+				</textarea>
+			</form>
 		</div>
 	)
 }
