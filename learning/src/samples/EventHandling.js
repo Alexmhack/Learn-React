@@ -13,6 +13,11 @@ function EventHandling (props) {
 			<br />
 			<br />
 			<button onClick={handleClickEvent}>Click me</button>
+			<br />
+			<br />
+			<h3 onCopy={e => console.log('text is copied')}>
+				Handle copy event on this piece of text.
+			</h3>
 		</div>
 	)
 }
