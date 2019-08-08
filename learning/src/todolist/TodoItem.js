@@ -2,6 +2,7 @@ import React from 'react'
 
 function TodoItem (props) {
 	const completed = props.item.completed
+	console.log(props.handleChange(12))
 
 	function handleCheckInput (event) {
 		console.log(event)
@@ -20,7 +21,7 @@ function TodoItem (props) {
 			      	<input type='checkbox'
 			      		aria-label="Checkbox for following text input"
 			      		name='check1'
-			      		onChange={handleCheckInput}
+			      		onChange={() => props.handleChange(props.item.id)}
 			      		checked={completed} />
 				    </div>
 				  </div>
