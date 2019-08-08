@@ -7,14 +7,20 @@ class ToDo extends Component {
 	constructor (props) {
 		super(props)
 
+		this.handleChange = this.handleChange.bind(this)
+
 		this.state = {
 			todos: todoData
 		}
 	}
 
+	handleChange (id) {
+		console.log('CHECKED', id)
+	}
+
 	render () {
 		const todoComponents = this.state.todos.map(item => <TodoItem key={item.id}
-			item={item} />)
+			item={item} handleChange={this.handleChange} />)
 
 		return (
 			<div className="container">
