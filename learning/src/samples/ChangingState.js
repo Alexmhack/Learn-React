@@ -23,6 +23,11 @@ class ChangingState extends Component {
     })
   }
 
+  resetClick = (event) => {
+    event.preventDefault()
+    this.state.count = 0
+  }
+
   render () {
     let count = this.state.count
 
@@ -34,7 +39,9 @@ class ChangingState extends Component {
         <br />
         <br />
         <button onClick={this.handleClick}
-          className='btn btn-primary'>Change</button>
+          className='btn btn-primary mr-2'>Change</button>
+        <button onClick={this.resetClick}
+          className='btn btn-secondary'>Reset</button>
       </div>
     )
   }
