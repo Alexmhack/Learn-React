@@ -26,7 +26,12 @@ class ChangingState extends Component {
   resetClick = (event) => {
     event.preventDefault()
     this.inputNumberRef.value = ''
-    this.state.count = 0
+
+    // never set the state value explicitly
+    // always use setState
+    this.setState({
+      count: 0
+    })
   }
 
   render () {
