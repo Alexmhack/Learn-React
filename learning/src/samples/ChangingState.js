@@ -10,9 +10,15 @@ class ChangingState extends Component {
   }
 
   handleClick () {
+    const numValue = this.inputNumberRef.value
+    let addBy = null
+    if (numValue !== undefined) {
+      addBy = parseInt(numValue, 10)
+    }
+
     this.setState(prevState => {
       return {
-        count: prevState.count + 1
+        count: prevState.count + addBy
       }
     })
   }
@@ -23,6 +29,9 @@ class ChangingState extends Component {
     return (
       <div className='py-5 text-center'>
         <h1>{count}</h1>
+        <br />
+        <input type="number" ref={e => this.inputNumberRef = e} />
+        <br />
         <br />
         <button onClick={this.handleClick}
           className='btn btn-primary'>Change</button>
