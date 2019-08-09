@@ -1,6 +1,19 @@
 import React, { Component } from 'react'
 
 class classComponent extends Component {
+  // componentWillMount() {
+  //   // will be deprecated in the future
+  // }
+
+  // componentWillReceiveProps() {
+  //   // will be deprecated in the future
+  // }
+
+  static getDerivedStateFromProps(props, state) {
+    // new static method which will
+    // return new updated state based upon the props
+  }
+
 	render () {
 		return (
 			<div>
