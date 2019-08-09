@@ -19,6 +19,7 @@ import LoginButton from './classBased/LoginButton'
 import AndOperator from './classBased/AndOperator'
 import SamplesRoutes from './samples/SamplesRoutes'
 import FakeApiCall from './lifecycles/FakeApiCall'
+import JsFetchMethod from './fetching/JsFetchMethod'
 
 function App() {
 	// const jokeComponents = JokesData.map(function(joke) {
@@ -45,6 +46,7 @@ function App() {
         <Route exact path='/login' component={LoginButton} />
         <Route exact path='/and-operator' component={AndOperator} />
         <Route exact path='/lifecyles' component={FakeApiCall} />
+        <Route exact path='/fetch' component={JsFetchMethod} />
   			<Route component={NotFound} />
   		</Switch>
   	</BrowserRouter>
