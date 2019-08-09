@@ -6,9 +6,9 @@ function TodoItem (props) {
 	// calling props.handleChange(id) method somewhere here will cause the infinite loop
 	// error since we are using setState in there.
 
-	function handleCheckInput (event) {
-		console.log(event)
-	}
+	// function handleCheckInput (event) {
+	// 	console.log(event)
+	// }
 
 	return (
 		<div className="card mb-4">
