@@ -20,6 +20,7 @@ class ToDo extends Component {
 				if (item.id === id) {
 					item.completed = !item.completed
 				}
+				return item
 			})
 
 			return {
