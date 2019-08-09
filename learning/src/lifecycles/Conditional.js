@@ -7,7 +7,7 @@ function Conditional(props) {
   return (
     <div className='text-center p-5'>
       <h1>Header</h1>
-      {props.isLoading === true ?
+      {props.isLoading ?
         <h1>Temp</h1>
         : <h1>The cool stuff has been loaded successfully.</h1>
       }
