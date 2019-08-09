@@ -15,6 +15,7 @@ import ProductDetail from './products/ProductDetail'
 import ToDo from './todolist/ToDo'
 import statesInReact from './statesInReact/statesInReact'
 import LoggedUser from './classBased/LoggedUser'
+import AndOperator from './classBased/AndOperator'
 import SamplesRoutes from './samples/SamplesRoutes'
 import FakeApiCall from './lifecycles/FakeApiCall'
 
@@ -40,6 +41,7 @@ function App() {
   			<Route exact path='/todos' component={ToDo} />
         <Route exact path='/states' component={statesInReact} />
         <Route exact path='/user' component={LoggedUser} />
+        <Route exact path='/and-operator' component={AndOperator} />
         <Route exact path='/lifecyles' component={FakeApiCall} />
   			<Route component={NotFound} />
   		</Switch>
