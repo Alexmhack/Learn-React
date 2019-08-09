@@ -6,16 +6,37 @@ import todoData from './todoData'
 class ToDo extends Component {
 	constructor (props) {
 		super(props)
-
-		this.handleChange = this.handleChange.bind(this)
-
 		this.state = {
 			todos: todoData
 		}
+		this.handleChange = this.handleChange.bind(this)
 	}
 
 	handleChange (id) {
-		console.log('CHECKED', id)
+		this.setState(prevState => {
+			let updatedTodos = prevState.todos
+
+			updatedTodos.map(item => {
+				if (item.id === id) {
+					item.completed = !item.completed
+				}
+			})
+
+			return {
+				todos: updatedTodos
+			}
+		})
+    // this.setState(prevState => {
+    //   const updatedTodos = prevState.todos.map(todo => {
+    //     if (todo.id === id) {
+    //       todo.completed = !todo.completed
+    //     }
+    //     return todo
+    //   })
+    //   return {
+    //     todos: updatedTodos
+    //   }
+    // })
 	}
 
 	render () {
