@@ -3,6 +3,9 @@ import React from 'react'
 function TodoItem (props) {
 	const completed = props.item.completed
 
+	// calling props.handleChange(id) method somewhere here will cause the infinite loop
+	// error since we are using setState in there.
+
 	function handleCheckInput (event) {
 		console.log(event)
 	}
