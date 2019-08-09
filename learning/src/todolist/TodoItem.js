@@ -2,7 +2,6 @@ import React from 'react'
 
 function TodoItem (props) {
 	const completed = props.item.completed
-	console.log(props.handleChange(12))
 
 	function handleCheckInput (event) {
 		console.log(event)
