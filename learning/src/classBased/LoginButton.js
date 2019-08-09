@@ -13,8 +13,10 @@ class LoginButton extends Component {
   handleLoginButton(event) {
     event.preventDefault()
 
-    this.setState({
-      loggedIn: !this.state.loggedIn
+    this.setState(prevState => {
+      return {
+        loggedIn: !prevState.loggedIn
+      }
     })
   }
 
