@@ -16,6 +16,7 @@ import ToDo from './todolist/ToDo'
 import statesInReact from './statesInReact/statesInReact'
 import LoggedUser from './classBased/LoggedUser'
 import SamplesRoutes from './samples/SamplesRoutes'
+import FakeApiCall from './lifecycles/FakeApiCall'
 
 function App() {
 	// const jokeComponents = JokesData.map(function(joke) {
@@ -39,6 +40,7 @@ function App() {
   			<Route exact path='/todos' component={ToDo} />
         <Route exact path='/states' component={statesInReact} />
         <Route exact path='/user' component={LoggedUser} />
+        <Route exact path='/lifecyles' component={FakeApiCall} />
   			<Route component={NotFound} />
   		</Switch>
   	</BrowserRouter>
