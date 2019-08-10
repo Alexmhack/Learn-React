@@ -19,11 +19,13 @@ class AirlineForm extends Component {
 
   handleChange = (event) => {
     const {name, value, type, checked} = event.target
-    type === "checkbox" ? this.setState({ [name]: checked }) : this.setState({ [name]: value })
+    let {dietaryRestrictions} = this.state
+    type === "checkbox" ? this.setState({ [dietaryRestrictions.name]: checked })
+      : this.setState({ [name]: value })
   }
 
   render() {
-    console.log(this.state.diet)
+    console.log(this.state.dietaryRestrictions)
 
     return (
       <main className="text-center p-5">
@@ -102,27 +104,27 @@ class AirlineForm extends Component {
           <label>
             <input
               type="checkbox"
-              name="vegetarian"
+              name="isVegan"
               onChange={this.handleChange}
-
+              checked={this.state.dietaryRestrictions.isVegan}
             />
             Vegetarian
           </label>
           <label>
             <input
               type="checkbox"
-              name="lactoseFree"
+              name="isLactoseFree"
               onChange={this.handleChange}
-
+              checked={this.state.dietaryRestrictions.isLactoseFree}
             />
             Lactose free
           </label>
           <label>
             <input
               type="checkbox"
-              name="kosher"
+              name="isKosher"
               onChange={this.handleChange}
-
+              checked={this.state.dietaryRestrictions.isKosher}
             />
             Kosher
           </label>
@@ -137,7 +139,7 @@ class AirlineForm extends Component {
         <p>Your gender: {this.state.gender}</p>
         <p>Your destination: {this.state.location}</p>
         <p>
-            Your dietary restrictions: {this.state.diet}
+            Your dietary restrictions: {this.state.dietaryRestrictions.isVegan}
         </p>
       </main>
     )
