@@ -60,6 +60,7 @@ class AirlineForm extends Component {
               type="radio"
               name="gender"
               value="male"
+              checked={this.state.gender === "male"}
               onChange={this.handleChange}
             />
             Male
@@ -69,6 +70,7 @@ class AirlineForm extends Component {
               type="radio"
               name="gender"
               value="female"
+              checked={this.state.gender === "female"}
               onChange={this.handleChange}
             />
             Female
@@ -78,6 +80,7 @@ class AirlineForm extends Component {
               type="radio"
               name="gender"
               value="other"
+              checked={this.state.gender === "other"}
               onChange={this.handleChange}
             />
             Other
