@@ -9,7 +9,7 @@ function FormComponent(props) {
           name="firstName"
           placeholder="First Name"
           onChange={props.handleChange}
-          value={this.state.firstName}
+          value={props.data.firstName}
         />
         <br />
         <br />
@@ -18,7 +18,7 @@ function FormComponent(props) {
           name="lastName"
           placeholder="Last Name"
           onChange={props.handleChange}
-          value={this.state.lastName}
+          value={props.data.lastName}
         />
         <br />
         <br />
@@ -27,7 +27,7 @@ function FormComponent(props) {
           name="age"
           placeholder="Your age"
           onChange={props.handleChange}
-          value={this.state.age}
+          value={props.data.age}
         />
         <br />
         <br />
@@ -36,7 +36,7 @@ function FormComponent(props) {
             type="radio"
             name="gender"
             value="male"
-            checked={this.state.gender === "male"}
+            checked={props.data.gender === "male"}
             onChange={props.handleChange}
           />
           Male
@@ -46,7 +46,7 @@ function FormComponent(props) {
             type="radio"
             name="gender"
             value="female"
-            checked={this.state.gender === "female"}
+            checked={props.data.gender === "female"}
             onChange={props.handleChange}
           />
           Female
@@ -56,7 +56,7 @@ function FormComponent(props) {
             type="radio"
             name="gender"
             value="other"
-            checked={this.state.gender === "other"}
+            checked={props.data.gender === "other"}
             onChange={props.handleChange}
           />
           Other
@@ -66,7 +66,7 @@ function FormComponent(props) {
         <select
           onChange={props.handleChange}
           name="location"
-          value={this.state.location}
+          value={props.data.location}
         >
           <option value="indore">Indore</option>
           <option value="mumbai">Mumbai</option>
@@ -80,7 +80,7 @@ function FormComponent(props) {
             type="checkbox"
             name="isVegan"
             onChange={props.handleChange}
-            checked={this.state.dietaryRestrictions.isVegan}
+            checked={props.data.dietaryRestrictions.isVegan}
           />
           Vegetarian
         </label>
@@ -89,7 +89,7 @@ function FormComponent(props) {
             type="checkbox"
             name="isLactoseFree"
             onChange={props.handleChange}
-            checked={this.state.dietaryRestrictions.isLactoseFree}
+            checked={props.data.dietaryRestrictions.isLactoseFree}
           />
           Lactose free
         </label>
@@ -98,7 +98,7 @@ function FormComponent(props) {
             type="checkbox"
             name="isKosher"
             onChange={props.handleChange}
-            checked={this.state.dietaryRestrictions.isKosher}
+            checked={props.data.dietaryRestrictions.isKosher}
           />
           Kosher
         </label>
@@ -108,15 +108,15 @@ function FormComponent(props) {
       <hr />
       <br />
       <h2>Entered information:</h2>
-      <p>Your name: {this.state.firstName + " " + this.state.lastName}</p>
-      <p>Your age: {this.state.age}</p>
-      <p>Your gender: {this.state.gender}</p>
-      <p>Your destination: {this.state.location}</p>
+      <p>Your name: {props.data.firstName + " " + props.data.lastName}</p>
+      <p>Your age: {props.data.age}</p>
+      <p>Your gender: {props.data.gender}</p>
+      <p>Your destination: {props.data.location}</p>
       <p>
           Your dietary restrictions:
-          {this.state.dietaryRestrictions.isVegan ? "Vegetarian, " : ""}
-          {this.state.dietaryRestrictions.isKosher ? "Kosher, " : ""}
-          {this.state.dietaryRestrictions.isLactoseFree ? "Lactose Free" : ""}
+          {props.data.dietaryRestrictions.isVegan ? "Vegetarian, " : ""}
+          {props.data.dietaryRestrictions.isKosher ? "Kosher, " : ""}
+          {props.data.dietaryRestrictions.isLactoseFree ? "Lactose Free" : ""}
       </p>
     </main>
   )
