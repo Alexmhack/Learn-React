@@ -10,9 +10,11 @@ class PartOne extends Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
+  // DRY method to store values in state
   handleChange(event) {
     this.setState({
-      firstName: event.target.value
+      // JS notation for settings keys in a object
+      [event.target.name]: event.target.value
     })
   }
 
