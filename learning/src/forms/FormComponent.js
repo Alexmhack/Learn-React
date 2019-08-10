@@ -9,7 +9,7 @@ function FormComponent(props) {
           name="firstName"
           placeholder="First Name"
           onChange={props.handleChange}
-          value={props.data.firstName}
+          value={props.firstName}
         />
         <br />
         <br />
@@ -18,7 +18,7 @@ function FormComponent(props) {
           name="lastName"
           placeholder="Last Name"
           onChange={props.handleChange}
-          value={props.data.lastName}
+          value={props.lastName}
         />
         <br />
         <br />
@@ -27,7 +27,7 @@ function FormComponent(props) {
           name="age"
           placeholder="Your age"
           onChange={props.handleChange}
-          value={props.data.age}
+          value={props.age}
         />
         <br />
         <br />
@@ -36,7 +36,7 @@ function FormComponent(props) {
             type="radio"
             name="gender"
             value="male"
-            checked={props.data.gender === "male"}
+            checked={props.gender === "male"}
             onChange={props.handleChange}
           />
           Male
@@ -46,7 +46,7 @@ function FormComponent(props) {
             type="radio"
             name="gender"
             value="female"
-            checked={props.data.gender === "female"}
+            checked={props.gender === "female"}
             onChange={props.handleChange}
           />
           Female
@@ -56,7 +56,7 @@ function FormComponent(props) {
             type="radio"
             name="gender"
             value="other"
-            checked={props.data.gender === "other"}
+            checked={props.gender === "other"}
             onChange={props.handleChange}
           />
           Other
@@ -66,7 +66,7 @@ function FormComponent(props) {
         <select
           onChange={props.handleChange}
           name="location"
-          value={props.data.location}
+          value={props.location}
         >
           <option value="indore">Indore</option>
           <option value="mumbai">Mumbai</option>
@@ -80,7 +80,7 @@ function FormComponent(props) {
             type="checkbox"
             name="isVegan"
             onChange={props.handleChange}
-            checked={props.data.dietaryRestrictions.isVegan}
+            checked={props.dietaryRestrictions.isVegan}
           />
           Vegetarian
         </label>
@@ -89,7 +89,7 @@ function FormComponent(props) {
             type="checkbox"
             name="isLactoseFree"
             onChange={props.handleChange}
-            checked={props.data.dietaryRestrictions.isLactoseFree}
+            checked={props.dietaryRestrictions.isLactoseFree}
           />
           Lactose free
         </label>
@@ -98,7 +98,7 @@ function FormComponent(props) {
             type="checkbox"
             name="isKosher"
             onChange={props.handleChange}
-            checked={props.data.dietaryRestrictions.isKosher}
+            checked={props.dietaryRestrictions.isKosher}
           />
           Kosher
         </label>
@@ -108,15 +108,15 @@ function FormComponent(props) {
       <hr />
       <br />
       <h2>Entered information:</h2>
-      <p>Your name: {props.data.firstName + " " + props.data.lastName}</p>
-      <p>Your age: {props.data.age}</p>
-      <p>Your gender: {props.data.gender}</p>
-      <p>Your destination: {props.data.location}</p>
+      <p>Your name: {props.firstName + " " + props.lastName}</p>
+      <p>Your age: {props.age}</p>
+      <p>Your gender: {props.gender}</p>
+      <p>Your destination: {props.location}</p>
       <p>
           Your dietary restrictions:
-          {props.data.dietaryRestrictions.isVegan ? "Vegetarian, " : ""}
-          {props.data.dietaryRestrictions.isKosher ? "Kosher, " : ""}
-          {props.data.dietaryRestrictions.isLactoseFree ? "Lactose Free" : ""}
+          {props.dietaryRestrictions.isVegan ? "Vegetarian, " : ""}
+          {props.dietaryRestrictions.isKosher ? "Kosher, " : ""}
+          {props.dietaryRestrictions.isLactoseFree ? "Lactose Free" : ""}
       </p>
     </main>
   )
