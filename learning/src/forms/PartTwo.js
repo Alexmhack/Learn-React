@@ -44,29 +44,52 @@ class PartTwo extends Component {
                     // value={"This is the sample value for text area."}
                   />
                 </div>
-              </div>
-              <div className="input-group-prepend">
-                <div className="input-group-text">
-                  <input
-                    type="radio"
-                    aria-label="Radio button for following text input"
-                    name="gender"
-                    value="male"
-                    checked={gender === "male"}
-                    onChange={this.handleChange}
-                  /> Male
+                <div className="input-group-prepend">
+                  <div className="input-group-text">
+                    <input
+                      type="checkbox"
+                      aria-label="Checkbox for following text input"
+                      checked={this.state.isFriendly}
+                      name="isFriendly"
+                      onChange={this.handleChange}
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="input-group-prepend">
-                <div className="input-group-text">
-                  <input
-                    type="radio"
-                    aria-label="Radio button for following text input"
-                    name="gender"
-                    value="female"
-                    checked={gender === "female"}
+                <div className="input-group-prepend">
+                  <div className="input-group-text">
+                    <input
+                      type="radio"
+                      aria-label="Radio button for following text input"
+                      name="gender"
+                      value="male"
+                      checked={gender === "male"}
+                      onChange={this.handleChange}
+                    /> Male
+                  </div>
+                </div>
+                <div className="input-group-prepend">
+                  <div className="input-group-text">
+                    <input
+                      type="radio"
+                      aria-label="Radio button for following text input"
+                      name="gender"
+                      value="female"
+                      checked={gender === "female"}
+                      onChange={this.handleChange}
+                    /> Female
+                  </div>
+                </div>
+                <div>
+                  <select
+                    value={this.state.favColor}
+                    name="favColor"
                     onChange={this.handleChange}
-                  /> Female
+                  >
+                    <option value="blue">Blue</option>
+                    <option value="orange">Orange</option>
+                    <option value="red">Red</option>
+                    <option value="yellow">Yellow</option>
+                  </select>
                 </div>
               </div>
               <button>Submit</button>
