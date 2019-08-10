@@ -6,10 +6,14 @@ class AirlineForm extends Component {
     this.state = {
       firstName: "",
       lastName: "",
-      age: 0,
+      age: "",
       gender: "",
       location: "",
-      diet: []
+      dietaryRestrictions: {
+        isVegan: false,
+        isKosher: false,
+        isLactoseFree: false
+      }
     }
   }
 
