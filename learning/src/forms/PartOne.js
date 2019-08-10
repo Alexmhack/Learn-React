@@ -12,9 +12,10 @@ class PartOne extends Component {
 
   // DRY method to store values in state
   handleChange(event) {
+    const {name, value} = event.target
     this.setState({
       // JS notation for settings keys in a object
-      [event.target.name]: event.target.value
+      [name]: value
     })
   }
 
