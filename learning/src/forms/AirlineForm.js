@@ -145,7 +145,10 @@ class AirlineForm extends Component {
         <p>Your gender: {this.state.gender}</p>
         <p>Your destination: {this.state.location}</p>
         <p>
-            Your dietary restrictions: {this.state.dietaryRestrictions.isVegan}
+            Your dietary restrictions:
+            {this.state.dietaryRestrictions.isVegan ? "Vegetarian, " : ""}
+            {this.state.dietaryRestrictions.isKosher ? "Kosher, " : ""}
+            {this.state.dietaryRestrictions.isLactoseFree ? "Lactose Free" : ""}
         </p>
       </main>
     )
