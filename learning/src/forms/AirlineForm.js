@@ -106,13 +106,13 @@ class AirlineForm extends Component {
         <hr />
         <br />
         <h2>Entered information:</h2>
-        <p>Your name: {/* First and last name here */}</p>
-        <p>Your age: {/* Age here */}</p>
-        <p>Your gender: {/* Gender here */}</p>
-        <p>Your destination: {/* Destination here */}</p>
+        <p>Your name: {this.state.firstName + " " + this.state.lastName}</p>
+        <p>Your age: {this.state.age}</p>
+        <p>Your gender: {this.state.gender}</p>
+        <p>Your destination: {this.state.location}</p>
         <p>
             Your dietary restrictions:
-            {/* Dietary restrictions here, comma separated */}
+            {this.state.diet}
         </p>
       </main>
     )
