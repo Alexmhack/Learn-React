@@ -13,6 +13,11 @@ class AirlineForm extends Component {
     }
   }
 
+  handleChange = (event) => {
+    const {name, value, type, checked} = event.target
+    type === "checkbox" ? this.setState({ [name]: checked }) : this.setState({ [name]: value })
+  }
+
   render() {
     return (
       <main className="text-center p-5">
