@@ -34,6 +34,7 @@ class PartOne extends Component {
                 aria-label="First Name"
                 aria-describedby="basic-addon1"
                 name="firstName"
+                value={this.state.firstName}
                 onChange={this.handleChange}
               />
               <input
@@ -43,6 +44,7 @@ class PartOne extends Component {
                 aria-label="Last Name"
                 aria-describedby="basic-addon1"
                 name="lastName"
+                value={this.state.lastName}
                 onChange={this.handleChange}
               />
             </div>
