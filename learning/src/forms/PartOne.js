@@ -24,8 +24,15 @@ class PartOne extends Component {
               <input
                 type="text"
                 className="form-control"
-                placeholder="Username"
-                aria-label="Username"
+                placeholder="First Name"
+                aria-label="First Name"
+                aria-describedby="basic-addon1"
+              />
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Last Name"
+                aria-label="Last Name"
                 aria-describedby="basic-addon1"
               />
             </div>
