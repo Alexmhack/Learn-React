@@ -9,7 +9,8 @@ class PartTwo extends Component {
     this.state = {
       description: "",
       isFriendly: true,
-      gender: ""
+      gender: "",
+      favColor: "blue"
     }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -72,11 +73,24 @@ class PartTwo extends Component {
                   /> Female
                 </div>
               </div>
+              <div>
+                <select
+                  value={this.state.favColor}
+                  name="favColor"
+                  onChange={this.handleChange}
+                >
+                  <option value="blue">Blue</option>
+                  <option value="orange">Orange</option>
+                  <option value="red">Red</option>
+                  <option value="yellow">Yellow</option>
+                </select>
+              </div>
             </div>
             <div>
               <h2>{this.state.description}</h2>
               <h2>{this.state.isFriendly}</h2>
               <h2>{gender ? "You are " + gender : ""}</h2>
+              <h2>Your favourite color is {this.state.favColor}.</h2>
             </div>
           </div>
         </div>
@@ -84,5 +98,7 @@ class PartTwo extends Component {
     )
   }
 }
+
+// More easier way to create forms in react -> Formik
 
 export default PartTwo
