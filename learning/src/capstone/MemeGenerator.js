@@ -20,13 +20,13 @@ class MemeGenerator extends Component {
           allMemeImgs: data.data.memes
         })
       })
-
-    setTimeout(() => console.log(this.state.allMemeImgs), 3000)
   }
 
   render() {
     return (
-      <h1>MEME GENERATOR</h1>
+      <div>
+
+      </div>
     )
   }
 }
