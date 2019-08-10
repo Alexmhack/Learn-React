@@ -4,12 +4,13 @@ class PartOne extends Component {
   constructor() {
     super()
     this.state = {
-      firstName: null
+      firstName: null,
+      lastName: null
     }
   }
 
-  handleChange() {
-
+  handleChange(event) {
+    console.log(event.target.name)
   }
 
   render() {
@@ -27,6 +28,7 @@ class PartOne extends Component {
                 placeholder="First Name"
                 aria-label="First Name"
                 aria-describedby="basic-addon1"
+                onChange={this.handleChange}
               />
               <input
                 type="text"
@@ -34,6 +36,7 @@ class PartOne extends Component {
                 placeholder="Last Name"
                 aria-label="Last Name"
                 aria-describedby="basic-addon1"
+                onChange={this.handleChange}
               />
             </div>
           </div>
