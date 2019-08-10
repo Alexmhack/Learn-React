@@ -9,7 +9,7 @@ class AirlineForm extends Component {
       age: 0,
       gender: "",
       location: "",
-      diet: ""
+      diet: []
     }
   }
 
@@ -19,6 +19,8 @@ class AirlineForm extends Component {
   }
 
   render() {
+    console.log(this.state.diet)
+
     return (
       <main className="text-center p-5">
         <form>
@@ -90,16 +92,33 @@ class AirlineForm extends Component {
           </select>
           <br />
           <br />
-          <select
-            onChange={this.handleChange}
-            name="diet"
-            value={this.state.diet}
-          >
-            <option value="vegetarian">Vegetarian</option>
-            <option value="kosher">Kosher</option>
-            <option value="lactose free">Lactose free</option>
-            <option value="non-vegetarian">Non-Vegetarian</option>
-          </select>
+          <label>
+            <input
+              type="checkbox"
+              name="vegetarian"
+              onChange={this.handleChange}
+
+            />
+            Vegetarian
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="lactoseFree"
+              onChange={this.handleChange}
+
+            />
+            Lactose free
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="kosher"
+              onChange={this.handleChange}
+
+            />
+            Kosher
+          </label>
           <br />
         </form>
         <br />
@@ -111,8 +130,7 @@ class AirlineForm extends Component {
         <p>Your gender: {this.state.gender}</p>
         <p>Your destination: {this.state.location}</p>
         <p>
-            Your dietary restrictions:
-            {this.state.diet}
+            Your dietary restrictions: {this.state.diet}
         </p>
       </main>
     )
