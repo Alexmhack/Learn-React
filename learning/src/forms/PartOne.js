@@ -4,8 +4,8 @@ class PartOne extends Component {
   constructor() {
     super()
     this.state = {
-      firstName: null,
-      lastName: null
+      firstName: "",
+      lastName: ""
     }
     this.handleChange = this.handleChange.bind(this)
   }
