@@ -34,7 +34,7 @@ class AirlineForm extends Component {
 
   render() {
     return <FormComponent handleChange={this.handleChange}
-      data={this.state} />
+      {...this.state} />
   }
 }
 
