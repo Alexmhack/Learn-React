@@ -7,10 +7,13 @@ class PartOne extends Component {
       firstName: null,
       lastName: null
     }
+    this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange(event) {
-    console.log(event.target.name)
+    this.setState({
+      firstName: event.target.value
+    })
   }
 
   render() {
@@ -28,6 +31,7 @@ class PartOne extends Component {
                 placeholder="First Name"
                 aria-label="First Name"
                 aria-describedby="basic-addon1"
+                name="firstName"
                 onChange={this.handleChange}
               />
               <input
@@ -36,8 +40,12 @@ class PartOne extends Component {
                 placeholder="Last Name"
                 aria-label="Last Name"
                 aria-describedby="basic-addon1"
+                name="lastName"
                 onChange={this.handleChange}
               />
+            </div>
+            <div className='pt-5'>
+              <h1>{this.state.firstName} {this.state.lastName}</h1>
             </div>
           </div>
         </div>
