@@ -19,8 +19,14 @@ class AirlineForm extends Component {
 
   handleChange = (event) => {
     const {name, value, type, checked} = event.target
-    let {dietaryRestrictions} = this.state
-    type === "checkbox" ? this.setState({ [dietaryRestrictions.name]: checked })
+    type === "checkbox" ? this.setState(prevState => {
+      return {
+        dietaryRestrictions: {
+          ...prevState.dietaryRestrictions,
+          [name]: checked
+        }
+      }
+    })
       : this.setState({ [name]: value })
   }
 
