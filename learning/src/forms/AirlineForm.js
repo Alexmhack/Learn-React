@@ -25,6 +25,7 @@ class AirlineForm extends Component {
             value={this.state.firstName}
           />
           <br />
+          <br />
           <input
             type="text"
             name="lastName"
@@ -33,6 +34,7 @@ class AirlineForm extends Component {
             value={this.state.lastName}
           />
           <br />
+          <br />
           <input
             type="number"
             name="age"
@@ -40,6 +42,7 @@ class AirlineForm extends Component {
             onChange={this.handleChange}
             value={this.state.age}
           />
+          <br />
           <br />
           <label>
             <input
@@ -69,6 +72,7 @@ class AirlineForm extends Component {
             Other
           </label>
           <br />
+          <br />
           <select
             onChange={this.handleChange}
             name="location"
@@ -79,6 +83,7 @@ class AirlineForm extends Component {
             <option value="delhi">Delhi</option>
             <option value="goa">Goa</option>
           </select>
+          <br />
           <br />
           <select
             onChange={this.handleChange}
