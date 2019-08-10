@@ -8,7 +8,8 @@ class PartTwo extends Component {
     super()
     this.state = {
       description: "",
-      isFriendly: true
+      isFriendly: true,
+      gender: ""
     }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -19,6 +20,7 @@ class PartTwo extends Component {
   }
 
   render() {
+    const {gender} = this.state
     return (
       <div className='container pt-5'>
         <div className='row'>
@@ -46,10 +48,35 @@ class PartTwo extends Component {
                   />
                 </div>
               </div>
+              <div className="input-group-prepend">
+                <div className="input-group-text">
+                  <input
+                    type="radio"
+                    aria-label="Radio button for following text input"
+                    name="gender"
+                    value="male"
+                    checked={gender === "male"}
+                    onChange={this.handleChange}
+                  /> Male
+                </div>
+              </div>
+              <div className="input-group-prepend">
+                <div className="input-group-text">
+                  <input
+                    type="radio"
+                    aria-label="Radio button for following text input"
+                    name="gender"
+                    value="female"
+                    checked={gender === "female"}
+                    onChange={this.handleChange}
+                  /> Female
+                </div>
+              </div>
             </div>
             <div>
               <h2>{this.state.description}</h2>
               <h2>{this.state.isFriendly}</h2>
+              <h2>{gender ? "You are " + gender : ""}</h2>
             </div>
           </div>
         </div>
