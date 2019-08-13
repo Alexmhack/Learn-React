@@ -23,6 +23,7 @@ import JsFetchMethod from './fetching/JsFetchMethod'
 import FormRoutes from './forms/FormRoutes'
 import Capstone from './capstone/Capstone'
 import MyEditor from './thirdparty/DraftEditor'
+import AceCodeEditor from './thirdparty/AceCodeEditor'
 
 function App() {
 	// const jokeComponents = JokesData.map(function(joke) {
@@ -53,6 +54,7 @@ function App() {
         <Route path='/forms/' component={FormRoutes} />
         <Route exact path='/capstone/' component={Capstone} />
         <Route exact path='/editor' component={MyEditor} />
+        <Route exact path='/code' component={AceCodeEditor} />
   			<Route component={NotFound} />
   		</Switch>
   	</BrowserRouter>
